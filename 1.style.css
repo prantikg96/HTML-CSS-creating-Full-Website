@@ -1,0 +1,58 @@
+header{
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+nav{
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: aquamarine;
+}
+
+#heroarea{
+    margin: 5px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: greenyellow;
+}
+
+main{
+    margin: 5px auto;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+section{
+    margin: 5px auto;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+article{
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+#contact{
+    margin: 5px auto;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+footer{
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color:chocolate;
+}

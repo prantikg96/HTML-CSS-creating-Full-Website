@@ -1,0 +1,9 @@
+A layout of a website has 3 main parts:
+
+    Header section with navigation: header section has navigation bar and main area/hero area.
+            navigation bar has logo on left side & link/route on right side.
+            main area/hero area below navigation bar, used for advertisement or main topics/purpose of that website.
+
+    Main Section: Middle section of a website. it has contents or subcontents of the website. a website can have may sections like blog section, article section, contact-area section etc.
+
+    Footer section: contains copyrights, recent post links, newsletters etc.

@@ -1,0 +1,448 @@
+/* Navigation Bar code */
+
+*{  /*body*/
+    margin: 0;
+    padding: 0;
+}
+
+#navigation{
+    /* background-color: dodgerblue; */
+    background-image: linear-gradient(dodgerblue,rgb(1, 63, 124));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigation > ul{
+    display: flex;
+    margin-right: 50px;
+}
+
+#navigation > ul > li{ /*nested selector '>' can also be used to select immediate child */
+    list-style-type: none;
+    margin: 0px 5px;
+    padding: 15px 0px;
+
+    margin-left: -5px;
+}
+
+#navigation > ul > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+    border-right: 2px solid white;
+    padding: 16px 20px;
+    transition: 0.5s;
+}
+
+#navigation > ul > li:first-child > a{
+    border-left: 2px solid white;
+    padding-left: 20px;
+}
+
+#navigation > ul > li:hover > a{
+    background-color: rgb(3, 87, 172);
+}
+
+.logo > h2{
+    color: white;
+    margin-left: 50px;
+}
+
+.logoFirstLetter{
+    color: rgb(255, 0, 149);
+    font-size: 30px;
+}
+
+
+/* dropdown code starts */
+
+.dropDown{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+    box-shadow: 10px 10px 15px black;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 or 1*/
+
+    /* transform: scale(0); */
+    transform: scaleY(0);
+    /* transform: scaleX(0); */
+    /* transform-origin: top center; */
+    transform-origin: top;
+}
+
+.dropDown > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropDown > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropDown > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropDown > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropDown */
+#navigation > ul > li:hover > .dropDown{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+
+    /* transform: scale(1); */
+    transform: scaleY(1);
+    /* transform: scaleX(1); */
+}
+
+
+/* hero-area/main-area starts here */
+
+#main-header{
+    text-align: center;
+    /* background-color: green; */
+    /* background-image: url('Images/qmTrmidGxtYqoT4zjoxPcV-650-80.jpg.webp'); LOCAL IMAGE*/
+    background-image: linear-gradient(rgba(0, 128, 0, 0.705), rgba(255, 255, 0, 0.096)), url('https://source.unsplash.com/user/erondu/');  /*REMOTE IMAGE*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 300px; */
+    /* eivabe height debo na. ami chai jotota screen size ache gota area niye bg color hobe. so: */
+    height: 95vh;
+}
+
+.header-container{
+    padding-top: 100px;
+}
+
+.header-container > h1{
+    background-color: rgba(2, 68, 134, 0.671);
+    /* display: inline-block; */
+    width: 500px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 50px;
+    color: white;
+}
+
+.header-container > button{
+    font-size: 22px;
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: #024a929a;
+    color: white;
+    border-radius: 20px 20px 60px 60px;
+    border: 4px solid green;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header-container > button:hover{
+    background-color: rgba(1, 40, 78, 0.199);
+}
+
+.header-container > h4{
+    font-size: 25px;
+    color: rgb(36, 35, 35);
+}
+
+.header-container > h5{
+    font-size: 25px;
+    color: rgb(36, 35, 35);
+    margin-bottom: 50px;
+}
+
+.socialIcons > a{
+    text-decoration: none;
+    color: white;
+}
+
+.socialIcons > a > i{
+    width: 50px;
+    height: 50px;
+    line-height: 1.6;
+    margin: 10px 5px;
+    font-size: 30px;
+    background-color: rgba(0, 128, 0, 0);
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.socialIcons > a > i:hover{
+    background-color: rgba(1, 40, 78, 0.514);
+    border: 2px solid green;
+    transform: rotate(360deg);
+}
+
+
+
+/* main section area starts here */
+
+/* first-section code */
+
+#first-section{
+    background-color: lightgrey;
+}
+#first-section-container{
+    width: 1000px;
+    /* border: 2px solid black; */
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.child-div{
+    width: 300px;
+    /* border: 2px solid black; */
+    text-align: center;
+    /* margin: 20px 20px; */
+    padding: 30px 10px;
+    transition: 0.5s;
+}
+
+.child-div:hover{
+    box-shadow: 3px 3px 10px grey;
+}
+
+.child-div > i{
+    font-size: 50px;
+}
+
+.child-div > h2{
+    margin: 15px 0;
+}
+
+
+/* second-section code */
+
+.smart-area-title > h2{
+    font-size: 40px;
+    text-align: center;
+    position: relative; /*dure na rekhe h2 er attiyo baniye dao jaate shey kacha kachi thake h2 er*/
+    /*background-color: green;*/    /*to check the area of h2*/
+}
+
+/* selection with pseudo element */
+
+.smart-area-title > h2::after{
+    /* mandatory properties for 'after' or 'before' */
+    content: '';    /*keep blank for making like underline*/
+    position: absolute;     /*haoa te veshe thako until u get a relative to stick with*/
+    width: 100px;
+    height: 5px;
+    background-color: #830707;
+
+    /* to place the underline in correct place, instead of putting top & left value again and again to check, we can go to browser and do so */
+    top: 48px;     /*bottom can also be used*/
+    left: 900px;    /*right can also be used*/
+}   /* you can also copy the same from browser->dev. tools-> styles-> modify & right click on empty area-> click on 'copy rules' */
+
+.smart-area{
+    width: 1000px;
+    /* border: 2px solid black; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.smart-area-text{
+    width: 500px;
+}
+
+.smart-area-text > h2{
+    margin: 20px 0;
+}
+
+.smart-area-text > h4{
+    color: #830707;
+}
+
+.smart-area-text > a{
+    text-decoration: none;
+    background-color: #830707;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+
+    /* margin: 20px 0;  wont work as 'a' tag is inline tag. so have to make it inline-block tag*/
+
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.smart-area-text > a:hover{
+    background-color: #5c0303;
+}
+
+
+/* third section code */
+
+#third-section{
+    background-color: #FAFAFA;
+}
+
+.services-area{
+    width: 1000px;
+    margin: auto;
+}
+
+.services-area-title{
+    text-align: center;
+    padding: 40px 0 60px 0;
+}
+
+.services-area-title > h2{
+    font-size: 40px;
+}
+
+.all-services-parent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.each-services{
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+.each-services > i{
+    font-size: 40px;
+    color: #830707ce;
+}
+
+.each-services > h3{
+    margin: 15px 0;
+}
+
+.each-services:hover{
+    background-color: #bfe5f1;
+}
+
+
+/* fourth section code */
+
+#fourth-section{
+    background-color: whitesmoke;
+}
+
+.pricing-area-total-container{
+    width: 1000px;
+    /* border: 2px solid red; */
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.pricing-title{
+    text-align: center;
+    font-size: 35px;
+    padding: 50px 0;
+}
+
+.pricing-area-parent{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.single-card-img{
+    width: 310px;
+    /* border: 4px solid red; */
+}
+
+.single-card-img > img{
+    width: 100%;    /*100% of parent class '.single-card-img'*/
+}
+
+.single-card{
+    width: 310px;
+    text-align: center;
+    /* border: 1px solid red; */
+    box-shadow: 5px 5px 10px gray;
+    transition: 0.2s;
+    transition-duration: 0.5s;
+}
+
+.single-card:hover{
+    background-color: rgba(185, 182, 182, 0.432);
+    transform: scaleY(1.05);
+}
+
+.single-card > h3{
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.month-pricing{
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+    padding: 15px 0;
+    margin: 15px 20px;
+}
+
+/* .month-pricing > .currency{}
+OR */
+.currency{
+    font-size: 30px;
+}
+
+/* .month-pricing > duration{}
+OR */
+.duration{
+    color: grey;
+}
+
+.single-card > button{
+    background-color: #830707;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.single-card > button:hover{
+    background-color: #83070700;
+    color: black;
+}
+
+.single-card > a{
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+
+/* 
+li:first-child means it will select the 1st child of li.
+
+display:block is so powerful that no animations or transitions will work. to overcome this problem, we use opacity:0 & visibility:hidden instead of display:none in .dropdownHome & opacity:1 & visibility:visible instead of display:block
+*/

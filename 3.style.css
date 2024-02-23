@@ -1,0 +1,315 @@
+/* Navigation Bar code */
+
+*{  /*body*/
+    margin: 0;
+    padding: 0;
+}
+
+#navigation{
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigation > ul{
+    display: flex;
+    margin-right: 50px;
+}
+
+#navigation > ul > li{ /*nested selector '>' can also be used to select immediate child */
+    list-style-type: none;
+    margin: 0px 5px;
+    padding: 15px 0px;
+
+    margin-left: -5px;
+}
+
+#navigation > ul > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+    border-right: 2px solid white;
+    padding: 16px 20px;
+    transition: 0.5s;
+}
+
+#navigation > ul > li:first-child > a{
+    border-left: 2px solid white;
+    padding-left: 20px;
+}
+
+#navigation > ul > li:hover > a{
+    background-color: rgb(3, 87, 172);
+}
+
+.logo > h2{
+    color: white;
+    margin-left: 50px;
+}
+
+
+/* dropdown code starts */
+
+/* dropdown menu for Home */
+
+.dropdownHome{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 or 1*/
+}
+
+.dropdownHome > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownHome > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownHome > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownHome > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownHome */
+#navigation > ul > li:hover > .dropdownHome{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/* dropdown menu for Services */
+
+.dropdownService{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 & 1*/
+}
+
+.dropdownService > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownService > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownService > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownService > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownService */
+#navigation > ul > li:hover > .dropdownService{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/* dropdown menu for Products */
+
+.dropdownProduct{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 & 1*/
+}
+
+.dropdownProduct > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownProduct > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownProduct > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownProduct > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownProduct */
+#navigation > ul > li:hover > .dropdownProduct{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/* dropdown menu for Career */
+
+.dropdownCareer{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 & 1*/
+}
+
+.dropdownCareer > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownCareer > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownCareer > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownCareer > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownCareer */
+#navigation > ul > li:hover > .dropdownCareer{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/* dropdown menu for About us */
+
+.dropdownAboutus{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 & 1*/
+}
+
+.dropdownAboutus > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownAboutus > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownAboutus > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownAboutus > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownAboutus */
+#navigation > ul > li:hover > .dropdownAboutus{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/* dropdown menu for Contact */
+
+.dropdownContact{
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    background-color: dodgerblue;
+    text-align: center;
+    margin-top: 15px;
+    width: 200px;
+
+    /* ebar dropdown menu guloke haoa te vashiye debo, tar place chariye diye, so using position as absolute. */
+    position: absolute;
+    transition: 0.5s; /*wont work if display:none & block used. will work when used opacity:0 & 1*/
+}
+
+.dropdownContact > li:first-child{
+    border-top: 1px solid white;
+}
+
+.dropdownContact > li{
+    list-style: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.dropdownContact > li:hover{
+    background-color: rgb(3, 87, 172);
+}
+
+.dropdownContact > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+/* #navigation > ul > li:hover > ul  OR we can use classname=dropdownContact */
+#navigation > ul > li:hover > .dropdownContact{
+    /*display: block;*/ /*actual looks like drop-down menu*/
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+/* li:first-child means it will select the 1st child of li.
+
+display:block is so powerful that no animations or transitions will work. to overcome this problem, we use opacity:0 & visibility:hidden instead of display:none in .dropdownHome & opacity:1 & visibility:visible instead of display:block
+*/
